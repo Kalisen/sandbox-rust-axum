@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Page 2</h1>
+    <p>Today's date and time: <span id="datetime">{{ now }}</span></p>
+    <form action="/user" method="post">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+        <label for="occupation">Occupation:</label><br>
+        <input type="text" id="occupation" name="occupation"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

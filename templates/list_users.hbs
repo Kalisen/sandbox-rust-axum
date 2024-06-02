@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Page 2</h1>
+    <p>Today's date and time: <span id="datetime">{{ now }}</span></p>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Occupation</th>
+        </tr>
+        {{#each user}}
+            {{this}}
+        <tr>
+            <td><a href="/user/{{ this.id }}">{{ this.id }}</a></td>
+            <td>{{ this.first_name }}</td>
+            <td>{{ this.last_name }}</td>
+            <td>{{ this.occupation }}</td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
