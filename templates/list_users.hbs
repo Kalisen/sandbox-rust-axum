@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page 2</title>
+    <title>Users</title>
 </head>
 <body>
-    <h1>Page 2</h1>
+    <h1>Users</h1>
     <p>Today's date and time: <span id="datetime">{{ now }}</span></p>
+    <div>
+        <form action="/users/new" method="get">
+            <button id="new-user" type="submit">New User</button>
+        </form>
     <table>
         <tr>
             <th>Id</th>
@@ -14,9 +18,8 @@
             <th>Occupation</th>
         </tr>
         {{#each user}}
-            {{this}}
         <tr>
-            <td><a href="/user/{{ this.id }}">{{ this.id }}</a></td>
+            <td><a href="/users/{{ this.id }}">{{ this.id }}</a></td>
             <td>{{ this.first_name }}</td>
             <td>{{ this.last_name }}</td>
             <td>{{ this.occupation }}</td>
